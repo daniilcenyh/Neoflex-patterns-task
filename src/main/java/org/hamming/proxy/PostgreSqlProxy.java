@@ -6,6 +6,10 @@ public class PostgreSqlProxy implements DataBase{
     private static final String HOST = "localhost";
     private static final int PORT = 5432;
 
+    public PostgreSqlProxy(String dbName) {
+        this.dbName = dbName;
+    }
+
     @Override
     public void connect() {
         if (postgreSQL == null) {
